@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms with HTML and CSS</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: 'Times New Roman', Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        }
+
+        .form1 {
+            background: white;
+            width: 550px;
+            margin: 20px auto 20px auto;
+            border-radius: 20px;
+        }
+
+        .form1 .header {
+            background-color: rgb(44, 138, 192);
+            color: white;
+            padding: 20px 10px 10px 30px;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .form1 .circle {
+            color: white;
+            border-radius: 100%;
+            background-color: rgb(44, 138, 192);
+            padding: 8px;
+            border: none;
+            margin-left: -10px;
+        }
+
+        .form1 .sub-head {
+            padding-left: 20px;
+            color: rgb(44, 138, 192);
+            font-size: 20px;
+            font-weight: 700;
+            margin: 10px 10px 10px 5px;
+        }
+
+        .form1 .separateform {
+            margin: 10px 30px;
+            padding: 20px 20px 30px 20px;
+            background: rgb(230, 230, 230);
+            color: rgb(102, 100, 100);
+            border-radius: 10px;
+        }
+
+        .form1 input[type=text],
+        .form1 input[type=password],
+        .form1 textarea {
+            width: 95%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background: white;
+            margin: 1px 10px 10px 1px;
+        }
+
+        .form1 input[type=text]:focus,
+        .form1 input[type=password]:focus,
+        .form1 textarea:focus {
+            background-color: white;
+            outline: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .form1 input[type=submit] {
+            background-color: rgb(44, 138, 192);
+            color: white;
+            padding: 10px 30px;
+            border-radius: 10px;
+            border: none;
+            margin: 10px 100px 10px 30px;
+            font-size: 15px;
+        }
+
+        .form2 {
+            width: 650px;
+            padding: 30px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .form2 input[type=text],
+        .form2 textarea {
+            width: 95%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: rgb(230, 230, 230);
+            border-radius: 10px;
+        }
+
+        .form2 select {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: rgb(230, 230, 230);
+            border-radius: 10px;
+        }
+
+        .form2 input[type=text]:focus,
+        .form2 textarea:focus,
+        .form2 select:focus {
+            background-color: rgb(200, 200, 200);
+            outline: none;
+        }
+
+        .form2 .shape {
+            background-color: rgb(60, 202, 152);
+            color: white;
+            padding: 7px;
+            border-radius: 100% 100% 100% 0%;
+
+        }
+
+        .form2 input[type=submit] {
+            width: 100%;
+            padding: 17px;
+            background-color: rgb(60, 202, 152);
+            border: none;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="form1">
+        <div class="header"><span style="font-size: 25px;">Sign Up Now!</span><br>Sign up and tell uswhat you think of
+            the site!</div>
+        <br>
+        <form autocomplete="on" action="https://www.w3schools.com/" method="post">
+            <div><span class="circle">1</span><span class="sub-head">First Name & Last Name</span></div>
+            <div class="separateform">
+                <label for="fullname">Your Full Name</label><br>
+                <input type="text" id="fullname" name="fullname" size="53">
+                <br>
+                <label for="address">Address</label><br>
+                <textarea rows="2" cols="20" id="address" name="address"></textarea>
+            </div>
+
+            <div><span class="circle">2</span><span class="sub-head">Email & Phone</span></div>
+            <div class="separateform">
+                <label for="email">Email Address</label><br>
+                <input type="text" id="email" name="email" size="53">
+                <br>
+                <label for="phone">Phone Number</label><br>
+                <input type="text" id="phone" name="phone" size="53"></input>
+            </div>
+
+            <div><span class="circle">3</span><span class="sub-head">Passwords</span></div>
+            <div class="separateform">
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" size="53">
+                <br>
+                <label for="con_pass">Confirm Password</label><br>
+                <input type="password" id="con_pass" name="con_pass" size="53"></input>
+            </div>
+            <div>
+                <input type="submit" value="Submit" />
+                <input type="checkbox" id="policy" name="policy">You agree to our Terms and Policy
+            </div>
+        </form>
+    </section>
+
+    <section class="form2">
+        <form autocomplete="on" action="https://www.w3schools.com/" method="post">
+            <div>
+                <div style="margin:10px">
+                    <span class="shape">1</span><span style="font-size: 22px;"><b> Candidate Info</b></span>
+                </div>
+                <input type="text" id="name" placeholder="Your Name *" name="name" required>
+                <input type="text" id="email" placeholder="Your Email *" name="email" required>
+                <textarea rows="2" cols="15" id="yourself" name="yourself" placeholder="About Yourself"></textarea>
+                <label for="interests"><b>Interests:</b></label>
+                <select name="interests" id="interests">
+                    <option value="">Select your interest from the list below</option>
+                    <optgroup label="Indoors">
+                        <option value="FishKeeping">FishKeeping</option>
+                        <option value="Reading">Reading</option>
+                        <option value="Boxing">Boxing</option>
+                        <option value="Debate">Debate</option>
+                        <option value="Gaming">Gaming</option>
+                        <option value="Snooker">Snooker</option>
+                        <option value="Other">Other</option>
+                    </optgroup>
+                    <optgroup label="Outdoors">
+                        <option value="Football">Football</option>
+                        <option value="Swimming">Swimming</option>
+                        <option value="Fishing">Fishing</option>
+                        <option value="Climbing">Climbing</option>
+                        <option value="Cycling">Cycling</option>
+                        <option value="Other">Other</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+                <div style="margin:10px">
+                    <span class="shape">2</span><span style="font-size: 22px;"><b> Additional Info</b></span>
+                </div>
+                <textarea name="aboutschool" placeholder="About Your School"></textarea>
+            </div>
+            <input type="submit" value="Apply" />
+
+        </form>
+    </section>
+</body>
+
+</html>
